@@ -147,9 +147,9 @@ export default function LandingPages() {
                             fontSize: "clamp(2rem, 5vw, 4rem)", lineHeight: 0.94, fontWeight: 700,
                             textTransform: "uppercase", marginBottom: "0",
                         }}>
-                            Fiverr will sell you a{" "}
-                            <span style={{ fontStyle: "italic", textTransform: "none", color: "var(--text-muted)", display: "block", lineHeight: 1, fontWeight: 300 }}>
-                                WordPress site for <strong style={{ fontWeight: 700, color: "var(--gold)", textShadow: "0 2px 15px rgba(139,105,20,0.3)" }}>£80</strong>.
+                            Fiverr and Upwork will charge you{" "}
+                            <span style={{ display: "block", lineHeight: 1, marginTop: "8px" }}>
+                                <strong style={{ color: "#8C2B2B", textShadow: "0 2px 15px rgba(140,43,43,0.25)" }}>MORE</strong> for a cloned template.
                             </span>
                             <span style={{ color: "var(--gold)" }}>Here&apos;s the difference.</span>
                         </h2>
@@ -246,10 +246,86 @@ export default function LandingPages() {
                         );
                     })()}
 
-                    <p style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", fontSize: "clamp(18px, 3vw, 22px)", color: "var(--text-muted)", lineHeight: 1.6, marginTop: "48px", maxWidth: "560px", fontWeight: 300 }}>
-                        &ldquo;The cheapest Fiverr option isn&apos;t £80 — the cost is the clients
+                    <p style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", fontSize: "clamp(18px, 3vw, 22px)", color: "var(--text-primary)", lineHeight: 1.6, marginTop: "48px", maxWidth: "600px", fontWeight: 500 }}>
+                        &ldquo;Fiverr and Upwork will charge you more for a generic site — but the real cost is the clients
                         who click away when the page takes 8 seconds to load.&rdquo;
                     </p>
+                </div>
+            </section>
+
+            {/* ══════════════════ RECENT WORK (SOCIAL PROOF) ══════════════════ */}
+            <section className="lp-section">
+                <div className="lp-inner">
+                    {sectionLabel("03", "Recent Work")}
+
+                    <div style={{ marginBottom: "64px", display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px" }}>
+                        <h2 style={{
+                            fontFamily: "var(--font-display), serif",
+                            fontSize: "clamp(2.4rem, 6vw, 4.5rem)", lineHeight: 0.92,
+                            textTransform: "uppercase", fontWeight: 700, marginBottom: "0", maxWidth: "600px",
+                        }}>
+                            Proof in the{" "}
+                            <span style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", textTransform: "none", color: "var(--gold)", display: "inline-block", fontSize: "1.05em", fontWeight: 300 }}>
+                                pixels.
+                            </span>
+                        </h2>
+                        <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "15px", lineHeight: 1.8, color: "var(--text-secondary)", maxWidth: "340px", margin: 0 }}>
+                            A few recent landing pages built for personal trainers and coaches. Fast, custom, and designed to convert.
+                        </p>
+                    </div>
+
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
+                        {[
+                            { name: "Lanna Muay Thai", type: "Fighter & Coach", img: "https://picsum.photos/seed/lanna/800/600", url: "#", result: "+42% lead conversion" },
+                            { name: "Elevate Fitness", type: "Online Coaching", img: "https://picsum.photos/seed/elevate/800/600", url: "#", result: "Fully booked in 14 days" },
+                            { name: "Tayo Odunjo MMA", type: "PT & Classes", img: "https://picsum.photos/seed/tayo/800/600", url: "#", result: "Sub-1.5s mobile load time" },
+                        ].map((work) => (
+                            <div key={work.name} className="lp-lift" style={{
+                                backgroundColor: "var(--bg-card)",
+                                borderRadius: "12px",
+                                overflow: "hidden",
+                                border: "1px solid var(--border-hairline)",
+                                boxShadow: "0 8px 30px rgba(44,36,24,0.04)",
+                                display: "flex", flexDirection: "column",
+                            }}>
+                                {/* Browser bar mockup */}
+                                <div style={{ backgroundColor: "rgba(44,36,24,0.05)", padding: "12px 16px", display: "flex", alignItems: "center", gap: "6px", borderBottom: "1px solid var(--border-hairline)" }}>
+                                    <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "rgba(44,36,24,0.15)" }} />
+                                    <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "rgba(44,36,24,0.15)" }} />
+                                    <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "rgba(44,36,24,0.15)" }} />
+                                </div>
+
+                                {/* Image Placeholder */}
+                                <div style={{ width: "100%", aspectRatio: "4/3", backgroundColor: "rgba(44,36,24,0.02)", position: "relative", overflow: "hidden" }}>
+                                    <img src={work.img} alt={`${work.name} website`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", mixBlendMode: "multiply", opacity: 0.9 }} />
+                                </div>
+
+                                {/* Content */}
+                                <div style={{ padding: "24px", display: "flex", flexDirection: "column", flexGrow: 1, backgroundColor: "var(--bg-card)" }}>
+                                    <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.15em", color: "var(--gold)", marginBottom: "8px" }}>
+                                        {work.type}
+                                    </div>
+                                    <h3 style={{ fontFamily: "var(--font-display), serif", fontSize: "24px", fontWeight: 700, color: "var(--text-primary)", marginBottom: "8px", lineHeight: 1.2 }}>
+                                        {work.name}
+                                    </h3>
+                                    <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", color: "var(--text-secondary)", marginBottom: "24px" }}>
+                                        {work.result}
+                                    </p>
+                                    <div style={{ marginTop: "auto" }}>
+                                        <a href={work.url} target="_blank" rel="noopener noreferrer" style={{
+                                            display: "inline-flex", alignItems: "center", gap: "8px",
+                                            fontFamily: "var(--font-body), sans-serif", fontSize: "12px", fontWeight: 600,
+                                            textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-primary)",
+                                            textDecoration: "none", borderBottom: "1px solid var(--border-hairline)", paddingBottom: "4px",
+                                            transition: "border-color 0.2s ease"
+                                        }}>
+                                            Visit Live Site <span style={{ fontSize: "14px", transform: "translateY(-1px)" }}>↗</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -257,7 +333,7 @@ export default function LandingPages() {
             <section className="lp-section-gold" style={{ backgroundColor: "var(--gold)", position: "relative", overflow: "hidden" }}>
                 <div className="lp-inner">
                     <div style={{ display: "flex", alignItems: "center", gap: "24px", marginBottom: "72px" }}>
-                        <span style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.25em", color: "rgba(232,228,220,0.5)", whiteSpace: "nowrap" }}>03 — What You Get</span>
+                        <span style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.25em", color: "rgba(232,228,220,0.5)", whiteSpace: "nowrap" }}>04 — What You Get</span>
                         <div style={{ flex: 1, height: "1px", backgroundColor: "rgba(232,228,220,0.15)" }} />
                     </div>
 
@@ -266,12 +342,12 @@ export default function LandingPages() {
                             <h2 style={{ fontFamily: "var(--font-display), serif", fontSize: "clamp(2.6rem, 7vw, 5.5rem)", lineHeight: 0.9, textTransform: "uppercase", color: "#E8E4DC", fontWeight: 700, marginBottom: "0", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "8px" }}>
                                 <span>The</span>
                                 <span style={{
-                                    fontStyle: "italic", textTransform: "none", fontSize: "1.15em",
+                                    fontStyle: "italic", fontSize: "1.3em",
                                     fontWeight: 300, lineHeight: 1,
-                                    border: "1px solid rgba(232,228,220,0.4)",
-                                    padding: "4px 24px", borderRadius: "100px",
+                                    border: "1px solid #1A120B",
+                                    padding: "4px 24px",
                                     display: "inline-block",
-                                }}>everything</span>
+                                }}>EVERYTHING</span>
                                 <span>package.</span>
                             </h2>
                             <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginTop: "36px", maxWidth: "340px" }}>
@@ -296,8 +372,7 @@ export default function LandingPages() {
                             </div>
                         </div>
 
-                        <div className="lp-pkg-tall lp-lift" style={{ backgroundColor: "rgba(232,228,220,0.1)", borderRadius: "12px", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "space-between", border: "1px solid rgba(232,228,220,0.08)", minHeight: "280px", boxShadow: "0 8px 40px rgba(0,0,0,0.1)" }}>
-                            <div style={{ fontSize: "32px", marginBottom: "48px" }}>🌐</div>
+                        <div className="lp-pkg-tall lp-lift" style={{ backgroundColor: "rgba(232,228,220,0.1)", padding: "40px 36px", display: "flex", flexDirection: "column", justifyContent: "space-between", border: "1px solid #1A120B", minHeight: "280px", boxShadow: "0 8px 40px rgba(0,0,0,0.1)" }}>
                             <div>
                                 <h3 style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: "#E8E4DC", marginBottom: "12px" }}>Your Own .com Domain</h3>
                                 <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "14px", lineHeight: 1.75, color: "rgba(232,228,220,0.6)" }}>
@@ -308,13 +383,12 @@ export default function LandingPages() {
 
                         <div className="lp-pkg-pair">
                             {[
-                                { icon: "📱", title: "Mobile-First", body: "Built for phones. Flawless on desktop too." },
-                                { icon: "⚡", title: "Sub-2s Load", body: "Loads before they lose interest. Guaranteed." },
+                                { title: "Mobile-First", body: "Built for phones. Flawless on desktop too." },
+                                { title: "Sub-2s Load", body: "Loads before they lose interest. Guaranteed." },
                             ].map((item) => (
-                                <div key={item.title} className="lp-lift" style={{ backgroundColor: "rgba(232,228,220,0.1)", borderRadius: "12px", padding: "28px 24px", border: "1px solid rgba(232,228,220,0.08)", boxShadow: "0 4px 20px rgba(0,0,0,0.07)" }}>
-                                    <div style={{ fontSize: "24px", marginBottom: "32px" }}>{item.icon}</div>
+                                <div key={item.title} className="lp-lift" style={{ backgroundColor: "rgba(232,228,220,0.1)", padding: "28px 24px", border: "1px solid #1A120B", boxShadow: "0 4px 20px rgba(0,0,0,0.07)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
                                     <h3 style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "14px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: "#E8E4DC", marginBottom: "6px" }}>{item.title}</h3>
-                                    <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", lineHeight: 1.7, color: "rgba(232,228,220,0.55)" }}>{item.body}</p>
+                                    <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", lineHeight: 1.7, color: "rgba(232,228,220,0.55)", margin: 0 }}>{item.body}</p>
                                 </div>
                             ))}
                         </div>
@@ -322,15 +396,14 @@ export default function LandingPages() {
 
                     <div className="lp-grid-4">
                         {[
-                            { icon: "💬", title: "WhatsApp CTA", body: "One tap to book. Zero friction." },
-                            { icon: "📊", title: "Analytics", body: "Google Analytics + Meta Pixel, pre-installed." },
-                            { icon: "🔒", title: "SSL + Hosting", body: "HTTPS secured. Globally fast." },
-                            { icon: "🎨", title: "Custom Design", body: "Your brand. Not a template." },
+                            { title: "WhatsApp CTA", body: "One tap to book. Zero friction." },
+                            { title: "Analytics", body: "Google Analytics + Meta Pixel, pre-installed." },
+                            { title: "SSL + Hosting", body: "HTTPS secured. Globally fast." },
+                            { title: "Custom Design", body: "Your brand. Not a template." },
                         ].map((item) => (
-                            <div key={item.title} className="lp-lift" style={{ backgroundColor: "rgba(232,228,220,0.1)", borderRadius: "12px", padding: "24px 20px", border: "1px solid rgba(232,228,220,0.08)", boxShadow: "0 4px 20px rgba(0,0,0,0.07)" }}>
-                                <div style={{ fontSize: "20px", marginBottom: "20px" }}>{item.icon}</div>
+                            <div key={item.title} className="lp-lift" style={{ backgroundColor: "rgba(232,228,220,0.1)", padding: "24px 20px", border: "1px solid #1A120B", boxShadow: "0 4px 20px rgba(0,0,0,0.07)" }}>
                                 <h3 style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "12px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", color: "#E8E4DC", marginBottom: "4px" }}>{item.title}</h3>
-                                <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "12px", lineHeight: 1.65, color: "rgba(232,228,220,0.5)" }}>{item.body}</p>
+                                <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "12px", lineHeight: 1.65, color: "rgba(232,228,220,0.5)", margin: 0 }}>{item.body}</p>
                             </div>
                         ))}
                     </div>
@@ -340,7 +413,7 @@ export default function LandingPages() {
             {/* ══════════════════ PROCESS ══════════════════ */}
             <section className="lp-section">
                 <div className="lp-inner">
-                    {sectionLabel("04", "The Process")}
+                    {sectionLabel("05", "The Process")}
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         {[
@@ -378,7 +451,7 @@ export default function LandingPages() {
                 <div className="lp-inner lp-form-grid" style={{ position: "relative" }}>
                     {/* Left: Heading */}
                     <div>
-                        {sectionLabel("05", "Apply")}
+                        {sectionLabel("06", "Apply")}
 
                         <h2 style={{ fontFamily: "var(--font-display), serif", fontSize: "clamp(2.6rem, 6vw, 4.5rem)", lineHeight: 0.9, textTransform: "uppercase", fontWeight: 700, marginBottom: "0" }}>
                             Let&apos;s Get You{" "}
