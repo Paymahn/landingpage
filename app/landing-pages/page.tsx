@@ -246,10 +246,20 @@ export default function LandingPages() {
                         );
                     })()}
 
-                    <p style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", fontSize: "clamp(18px, 3vw, 22px)", color: "var(--text-primary)", lineHeight: 1.6, marginTop: "48px", maxWidth: "600px", fontWeight: 500 }}>
-                        &ldquo;Fiverr and Upwork will charge you more for a generic site — but the real cost is the clients
-                        who click away when the page takes 8 seconds to load.&rdquo;
-                    </p>
+                    <div style={{ marginTop: "72px", borderTop: "1px solid var(--border-hairline)", paddingTop: "56px", textAlign: "center", paddingBottom: "16px" }}>
+                        <p style={{
+                            fontFamily: "var(--font-display), serif",
+                            fontSize: "clamp(24px, 4.5vw, 42px)",
+                            lineHeight: 1.25,
+                            color: "var(--text-primary)",
+                            fontWeight: 700,
+                            margin: "0 auto",
+                            maxWidth: "900px",
+                        }}>
+                            &ldquo;If you think it&apos;s expensive to hire a professional, wait until you hire an amateur.&rdquo;
+                        </p>
+                        <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "12px", color: "var(--text-muted)", marginTop: "24px", textTransform: "uppercase", letterSpacing: "0.2em", fontWeight: 600 }}>— Red Adair</p>
+                    </div>
                 </div>
             </section>
 
@@ -712,7 +722,7 @@ function ProblemSection({ sectionLabel }: { sectionLabel: (num: string, text: st
                 <div style={{ marginTop: "72px", display: "grid", gridTemplateColumns: "1fr 1fr", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--border-hairline)" }}>
                     {/* Linktree side */}
                     <div style={{ padding: "32px 28px", backgroundColor: "rgba(160,50,50,0.05)" }}>
-                        <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.2em", color: "rgba(140,50,50,0.7)", marginBottom: "20px" }}>Linktree</div>
+                        <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", color: "rgba(140,50,50,0.8)", marginBottom: "24px" }}>Linktree</div>
                         {[
                             "Looks like a hobby",
                             "Same template as everyone",
@@ -720,15 +730,15 @@ function ProblemSection({ sectionLabel }: { sectionLabel: (num: string, text: st
                             "Slow, cluttered, generic",
                             "Screams \"I just started\"",
                         ].map((item) => (
-                            <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "10px" }}>
-                                <span style={{ color: "rgba(160,50,50,0.5)", fontSize: "12px", flexShrink: 0, marginTop: "2px" }}>✕</span>
-                                <span style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", lineHeight: 1.6, color: "rgba(140,50,50,0.55)" }}>{item}</span>
+                            <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "14px" }}>
+                                <span style={{ color: "rgba(160,50,50,0.5)", fontSize: "14px", flexShrink: 0, marginTop: "2px" }}>✕</span>
+                                <span style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "15px", lineHeight: 1.6, color: "rgba(140,50,50,0.7)" }}>{item}</span>
                             </div>
                         ))}
                     </div>
                     {/* Landing page side */}
                     <div style={{ padding: "32px 28px", backgroundColor: "rgba(139,105,20,0.04)" }}>
-                        <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold)", marginBottom: "20px" }}>Custom Landing Page</div>
+                        <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.2em", color: "var(--gold)", marginBottom: "24px" }}>Custom Landing Page</div>
                         {[
                             "Looks like a real business",
                             "100% custom to your brand",
@@ -736,9 +746,9 @@ function ProblemSection({ sectionLabel }: { sectionLabel: (num: string, text: st
                             "Fast, clean, professional",
                             "Says \"I'm worth investing in\"",
                         ].map((item) => (
-                            <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "10px" }}>
-                                <span style={{ color: "var(--gold)", fontSize: "12px", flexShrink: 0, marginTop: "2px" }}>✓</span>
-                                <span style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", lineHeight: 1.6, color: "var(--text-primary)", fontWeight: 500 }}>{item}</span>
+                            <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "14px" }}>
+                                <span style={{ color: "var(--gold)", fontSize: "14px", flexShrink: 0, marginTop: "2px", fontWeight: 700 }}>✓</span>
+                                <span style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "15px", lineHeight: 1.6, color: "var(--text-primary)", fontWeight: 600 }}>{item}</span>
                             </div>
                         ))}
                     </div>
