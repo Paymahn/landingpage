@@ -286,9 +286,7 @@ export default function LandingPages() {
 
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
                         {[
-                            { name: "Lanna Muay Thai", type: "Fighter & Coach", img: "https://picsum.photos/seed/lanna/800/600", url: "#", result: "+42% lead conversion" },
-                            { name: "Elevate Fitness", type: "Online Coaching", img: "https://picsum.photos/seed/elevate/800/600", url: "#", result: "Fully booked in 14 days" },
-                            { name: "Tayo Odunjo MMA", type: "PT & Classes", img: "https://picsum.photos/seed/tayo/800/600", url: "#", result: "Sub-1.5s mobile load time" },
+                            { name: "Tristen Muay Thai", type: "Fighter & Coach", img: "", url: "https://tristenmuaythai.com", result: "Live — tristenmuaythai.com" },
                         ].map((work) => (
                             <div key={work.name} className="lp-lift" style={{
                                 backgroundColor: "var(--bg-card)",
@@ -305,9 +303,16 @@ export default function LandingPages() {
                                     <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "rgba(44,36,24,0.15)" }} />
                                 </div>
 
-                                {/* Image Placeholder */}
                                 <div style={{ width: "100%", aspectRatio: "4/3", backgroundColor: "rgba(44,36,24,0.02)", position: "relative", overflow: "hidden" }}>
-                                    <img src={work.img} alt={`${work.name} website`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", mixBlendMode: "multiply", opacity: 0.9 }} />
+                                    <video
+                                        src="https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/tristen-muaythai.mp4"
+                                        muted
+                                        loop
+                                        playsInline
+                                        autoPlay
+                                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                                        preload="metadata"
+                                    />
                                 </div>
 
                                 {/* Content */}
