@@ -23,11 +23,16 @@ export const caseStudies: readonly CaseStudy[] = [
     slug: "road-ready-hgv-transformation",
     title: "Road Ready HGV Transformation",
     year: 2025,
-    tags: ["Next.js", "Tailwind CSS", "High Performance"],
+    tags: ["Next.js", "Tailwind CSS", "High Performance", "Social Media Ready"],
     media: [
       {
         type: "video",
-        url: "/videos/case-studies/road-ready-before.mp4",
+        url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/road-ready-after.mp4",
+        label: "Finished Site Recording",
+      },
+      {
+        type: "video",
+        url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/road-ready-before.mp4",
         label: "Previous Site Recording - Performance & UX Audit",
       },
     ],
@@ -36,19 +41,27 @@ export const caseStudies: readonly CaseStudy[] = [
         heading: "Context",
         paragraphs: [
           "A complete rebuild of the Road Ready HGV platform, moving from a legacy system to a modern, high-performance web architecture.",
-          "The focus was on speed, accessibility, and a premium user experience that converts leads for HGV training.",
+          "The previous site was slow, difficult to navigate, and lacked clear calls-to-action — costing the business leads on every visit.",
         ],
       },
       {
-        heading: "Tech Stack",
+        heading: "What Was Built",
         paragraphs: [
-          "Built using Next.js and Tailwind CSS for a lean, lightning-fast storefront. The transition resulted in significantly improved Core Web Vitals and a more maintainable codebase.",
+          "A fast-loading Next.js and Tailwind CSS site with all course information clearly structured and accessible within seconds. Every page features persistent CTAs — enquiry forms, phone links, and WhatsApp buttons — so visitors are never more than one tap from booking.",
+          "Built-in Meta Pixel and Google Analytics integration from day one, preparing the business for paid social media campaigns across TikTok, Instagram, and Facebook. The site is ready to receive ad traffic and convert it immediately.",
+        ],
+      },
+      {
+        heading: "Key Benefits",
+        paragraphs: [
+          "Sub-2 second load times on mobile — critical for ad traffic where users bounce fast. Clean, scannable layout that presents pricing, locations, and course details without friction.",
+          "Social media campaign readiness with tracking pixels pre-installed, Open Graph meta tags for link previews, and a mobile-first design that matches how ad traffic actually arrives.",
         ],
       },
       {
         heading: "Outcome",
         paragraphs: [
-          "A state-of-the-art platform that stands out in the HGV training industry. Faster load times, better mobile handling, and a cleaner path to conversion.",
+          "A platform that stands out in the HGV training industry. Faster, clearer, and built to convert — whether traffic comes from Google, social ads, or word of mouth.",
         ],
       },
     ],
@@ -57,20 +70,26 @@ export const caseStudies: readonly CaseStudy[] = [
     slug: "pressure-performance-transformation",
     title: "Pressure Performance Transformation",
     year: 2025,
+    tags: ["Shopify", "Custom Theme", "Wix Migration", "2D Builder"],
     media: [
       {
         type: "video",
-        url: "/videos/case-studies/pressure-builder.mp4",
-        label: "2D Custom Builder Preview",
+        url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/pressure-finished.mp4",
+        label: "Finished Site Recording",
       },
       {
         type: "video",
-        url: "/videos/case-studies/pressure-before-1.mp4",
+        url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/pressure-builder.mp4",
+        label: "Old Pressure Performance Home Page",
+      },
+      {
+        type: "video",
+        url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/pressure-before-1.mp4",
         label: "Previous Site Recording (Wix) - Part 1",
       },
       {
         type: "video",
-        url: "/videos/case-studies/pressure-before-2.mp4",
+        url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/pressure-before-2.mp4",
         label: "Previous Site Recording (Wix) - Part 2",
       },
     ],
@@ -105,55 +124,36 @@ export const caseStudies: readonly CaseStudy[] = [
     ],
   },
   {
-    slug: "next-js-site-01",
-    title: "Next.js Site #01",
-    year: "Coming Soon",
-    writeUp: [
-      {
-        heading: "Upcoming Project",
-        paragraphs: [
-          "A comprehensive website built in the high-performing Next.js & Tailwind stack. Focusing on speed, SEO, and premium user experience.",
-          "Currently in development. Stay posted for the full launch.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "next-js-site-02",
-    title: "Next.js Site #02",
-    year: "Coming Soon",
-    writeUp: [
-      {
-        heading: "Upcoming Project",
-        paragraphs: [
-          "Another high-performance application leveraging the power of Next.js and Tailwind CSS.",
-          "Focusing on specialised work and fast delivery for modern web requirements.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "atlas-replatform",
-    title: "Atlas Replatform",
+    slug: "pressure-2d-builder",
+    title: "Pressure Performance — 2D Custom Builder",
     year: 2025,
+    tags: ["Custom Tool", "E-Commerce", "Real-Time Preview", "Shopify", "Liquid"],
+    media: [
+      {
+        type: "video",
+        url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/pressure-builder-preview.mp4",
+        label: "2D Builder — Full Walkthrough",
+      },
+    ],
     writeUp: [
       {
         heading: "Context",
         paragraphs: [
-          "A fast-growing catalog outpaced theme-based constraints: merchandising demanded flexibility, marketing wanted speed, and operations needed predictability.",
-          "The objective was to modernize without losing what already worked: reliable checkout, stable integrations, and a cadence the team could maintain.",
+          "Pressure Performance sells fully custom martial arts gear — shirts, shorts, and fight kits with bespoke designs. The old workflow relied on lengthy back-and-forth messages to confirm layouts, colours, and logo placement, costing the business hours on every single order.",
         ],
       },
       {
-        heading: "Approach",
+        heading: "What Was Built",
         paragraphs: [
-          "We split the surface area into a headless storefront and a deliberately boring backend. The storefront focused on performance and content agility; the backend focused on correctness and integration clarity.",
+          "A fully interactive 2D configurator built with vanilla JavaScript, HTML5 Canvas, and Shopify Liquid — embedded directly into the storefront. Customers choose a garment type, pick a base design, upload logos, place text, and preview their custom kit in real time before adding to cart.",
+          "Every configuration syncs with Shopify's variant and metafield system, so the order arrives with all customisation details attached — no manual interpretation needed.",
         ],
       },
       {
-        heading: "Outcome",
+        heading: "Business Impact",
         paragraphs: [
-          "A storefront that loads quickly, scales cleanly, and stays easy to evolve. Marketing regained autonomy while engineering kept the system legible.",
+          "The builder has already paid for itself. The client has recouped the development cost through the time saved on the customisation process alone — what used to take multiple messages back and forth now happens instantly on-site.",
+          "Beyond efficiency, the builder has become a marketing tool. The client runs design competitions through social media, encouraging customers to share their custom builds — driving engagement, reach, and repeat traffic back to the store.",
         ],
       },
     ],
