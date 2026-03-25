@@ -92,7 +92,7 @@ export default function Home() {
                 I&apos;m building them a full site from scratch, wiring it into a single CRM so that when someone signs up for a free trial on the website, the staff get notified instantly and the lead is automatically followed up. No more manual chasing, no more missed enquiries.
               </p>
               <p>
-                The site has an interactive timetable, coach profiles, and clear info on every class they run. The whole thing is built around one goal: get people through the door for a free trial.
+                The site gives CRA a proper online presence — interactive timetable, coach profiles, class breakdowns, and a feel for what the gym is actually like. A front door for the business that anyone in the world can walk through.
               </p>
             </div>
           </div>
