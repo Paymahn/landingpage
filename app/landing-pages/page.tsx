@@ -27,12 +27,12 @@ export default function LandingPages() {
         boxSizing: "border-box" as const,
         transition: "border-color 0.3s ease, background-color 0.3s ease",
     };
-    const sectionLabel = (num: string, text: string) => (
+    const sectionLabel = (text: string) => (
         <div style={{ display: "flex", alignItems: "center", gap: "24px", marginBottom: "72px" }}>
             <span style={{
                 fontFamily: "var(--font-body), sans-serif", fontSize: "10px", fontWeight: 600,
                 textTransform: "uppercase", letterSpacing: "0.25em", color: "var(--gold)", whiteSpace: "nowrap",
-            }}>{num} — {text}</span>
+            }}>{text}</span>
             <div style={{ flex: 1, height: "1px", backgroundColor: "var(--border-hairline)" }} />
         </div>
     );
@@ -61,16 +61,6 @@ export default function LandingPages() {
 
                 <div className="lp-hero-pad" style={{ maxWidth: "1100px", margin: "0 auto", width: "100%", animation: "fadeUp 1s ease-out" }}>
 
-                    <p style={{
-                        fontFamily: "var(--font-body), sans-serif",
-                        fontSize: "clamp(14px, 2.5vw, 18px)", color: "var(--gold)", marginBottom: "24px",
-                        fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase",
-                    }}>For personal trainers who are{" "}
-                        <span style={{ borderBottom: "2px solid var(--gold)", paddingBottom: "2px" }}>serious</span>
-                        {" "}about{" "}
-                        <span style={{ borderBottom: "2px solid var(--gold)", paddingBottom: "2px" }}>growth</span>
-                    </p>
-
                     <h1 style={{
                         fontFamily: "var(--font-display), serif",
                         fontSize: "clamp(3.8rem, 14vw, 12rem)", lineHeight: 0.86,
@@ -81,6 +71,16 @@ export default function LandingPages() {
                         <span style={{ display: "block", color: "var(--text-primary)" }}>Losing</span>
                         <span style={{ display: "block", color: "var(--gold)", WebkitTextStroke: "2px var(--gold)", textShadow: "0 4px 30px rgba(139,105,20,0.25)" }}>Clients</span>
                     </h1>
+
+                    <p style={{
+                        fontFamily: "var(--font-body), sans-serif",
+                        fontSize: "clamp(14px, 2.5vw, 18px)", color: "var(--gold)", marginTop: "22px",
+                        fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase",
+                    }}>For personal trainers who are{" "}
+                        <span style={{ borderBottom: "2px solid var(--gold)", paddingBottom: "2px" }}>serious</span>
+                        {" "}about{" "}
+                        <span style={{ borderBottom: "2px solid var(--gold)", paddingBottom: "2px" }}>growth</span>
+                    </p>
 
                     <div className="lp-hero-cta-row" style={{ borderTop: "1px solid var(--border-hairline)" }}>
                         <div style={{
@@ -134,12 +134,12 @@ export default function LandingPages() {
             </section>
 
             {/* ══════════════════ THE PROBLEM ══════════════════ */}
-            <ProblemSection sectionLabel={sectionLabel} />
+            <ProblemSection />
 
             {/* ══════════════════ WHY NOT FIVERR ══════════════════ */}
             <section className="lp-section" style={{ backgroundColor: "var(--bg-card)" }}>
                 <div className="lp-inner">
-                    {sectionLabel("02", "Why Not Just Use Fiverr?")}
+                    {sectionLabel("Why Not Just Use Fiverr?")}
 
                     <div style={{ marginBottom: "64px" }}>
                         <h2 style={{
@@ -148,10 +148,8 @@ export default function LandingPages() {
                             textTransform: "uppercase", marginBottom: "0",
                         }}>
                             Fiverr and Upwork will charge you{" "}
-                            <span style={{ display: "block", lineHeight: 1, marginTop: "8px" }}>
-                                <strong style={{ color: "#8C2B2B", textShadow: "0 2px 15px rgba(140,43,43,0.25)" }}>MORE</strong> for a cloned template.
-                            </span>
-                            <span style={{ color: "var(--gold)" }}>Here&apos;s the difference.</span>
+                            <strong style={{ color: "#8C2B2B", textShadow: "0 2px 15px rgba(140,43,43,0.25)" }}>MORE</strong> for a cloned template.
+                            <span style={{ display: "block", lineHeight: 1, marginTop: "12px", color: "var(--gold)" }}>Here&apos;s the difference.</span>
                         </h2>
                     </div>
 
@@ -160,7 +158,7 @@ export default function LandingPages() {
                         const rows = [
                             { topic: "Design", bad: "A cloned WordPress theme you've seen on 50 other sites", good: "Fully custom design — built around you, from scratch" },
                             { topic: "Performance", bad: "Plugins stacked on plugins — slow, bloated, fragile", good: "Lean hand-coded build. Sub-2s load time, no bloat" },
-                            { topic: "Domain", bad: "A generic .wordpress.com or .wixsite.com subdomain", good: "Your own .com — trainwithjoe.com — first year included" },
+                            { topic: "Domain", bad: "A generic .wordpress.com or .wixsite.com subdomain", good: "Your own .com — set up properly and ready to share" },
                             { topic: "Speed", bad: "Delivered 'when it's ready' — weeks of chasing", good: "48 hours, guaranteed. You get a link or your money back" },
                             { topic: "Mobile", bad: "Desktop-first, shrunk down to mobile as an afterthought", good: "Mobile-first — because that's how your clients browse" },
                             { topic: "Analytics", bad: "No analytics, no pixel, no way to measure your ads", good: "Google Analytics + Meta Pixel installed before handover" },
@@ -266,7 +264,7 @@ export default function LandingPages() {
             {/* ══════════════════ RECENT WORK (SOCIAL PROOF) ══════════════════ */}
             <section className="lp-section">
                 <div className="lp-inner">
-                    {sectionLabel("03", "Recent Work")}
+                    {sectionLabel("Recent Work")}
 
                     <div style={{ marginBottom: "64px", display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px" }}>
                         <h2 style={{
@@ -348,7 +346,7 @@ export default function LandingPages() {
             <section className="lp-section-gold" style={{ backgroundColor: "var(--gold)", position: "relative", overflow: "hidden" }}>
                 <div className="lp-inner">
                     <div style={{ display: "flex", alignItems: "center", gap: "24px", marginBottom: "72px" }}>
-                        <span style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.25em", color: "rgba(232,228,220,0.5)", whiteSpace: "nowrap" }}>04 — What You Get</span>
+                        <span style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "10px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.25em", color: "rgba(232,228,220,0.5)", whiteSpace: "nowrap" }}>What You Get</span>
                         <div style={{ flex: 1, height: "1px", backgroundColor: "rgba(232,228,220,0.15)" }} />
                     </div>
 
@@ -391,7 +389,7 @@ export default function LandingPages() {
                             <div>
                                 <h3 style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "16px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: "#E8E4DC", marginBottom: "12px" }}>Your Own .com Domain</h3>
                                 <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "14px", lineHeight: 1.75, color: "rgba(232,228,220,0.6)" }}>
-                                    A proper URL like <em>trainwithjoe.com</em> — not a subdomain. Set up on Cloudflare for maximum speed. First year included.
+                                    A proper .com — not a subdomain. Set up on Cloudflare for maximum speed. First year included.
                                 </p>
                             </div>
                         </div>
@@ -428,7 +426,7 @@ export default function LandingPages() {
             {/* ══════════════════ PROCESS ══════════════════ */}
             <section className="lp-section">
                 <div className="lp-inner">
-                    {sectionLabel("05", "The Process")}
+                    {sectionLabel("The Process")}
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         {[
@@ -466,22 +464,22 @@ export default function LandingPages() {
                 <div className="lp-inner lp-form-grid" style={{ position: "relative" }}>
                     {/* Left: Heading */}
                     <div>
-                        {sectionLabel("06", "Apply")}
+                        {sectionLabel("Order Your Page")}
 
                         <h2 style={{ fontFamily: "var(--font-display), serif", fontSize: "clamp(2.6rem, 6vw, 4.5rem)", lineHeight: 0.9, textTransform: "uppercase", fontWeight: 700, marginBottom: "0" }}>
-                            Let&apos;s Get You{" "}
-                            <span style={{ fontStyle: "italic", textTransform: "none", color: "var(--gold)", display: "block", fontSize: "1.1em", lineHeight: 0.95, fontWeight: 300 }}>online.</span>
+                            Tell Me{" "}
+                            <span style={{ fontStyle: "italic", textTransform: "none", color: "var(--gold)", display: "block", fontSize: "1.1em", lineHeight: 0.95, fontWeight: 300 }}>what you need.</span>
                         </h2>
 
                         <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "15px", lineHeight: 1.9, color: "var(--text-secondary)", maxWidth: "360px", marginTop: "32px" }}>
-                            Fill in the form. I&apos;ll review your brief and get back to you within 24 hours with a plan. No payment until you&apos;re happy with the direction.
+                            Fill this in and I&apos;ll come back to you within 24 hours with a plan. You don&apos;t pay anything until you&apos;re happy with the direction — no risk, no commitment.
                         </p>
 
-                        <blockquote style={{ borderLeft: "1px solid var(--gold)", paddingLeft: "24px", marginTop: "48px", marginBottom: "0" }}>
-                            <p style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", fontSize: "22px", color: "var(--text-muted)", lineHeight: 1.6, margin: 0, fontWeight: 300 }}>
-                                &ldquo;Takes 2 minutes to fill in.<br />Takes 48 hours to go live.&rdquo;
+                        <div style={{ marginTop: "48px", padding: "20px 24px", borderLeft: "2px solid var(--gold)", backgroundColor: "rgba(139,105,20,0.04)" }}>
+                            <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "14px", color: "var(--text-secondary)", lineHeight: 1.7, margin: 0 }}>
+                                <strong style={{ color: "var(--text-primary)" }}>How it works:</strong> You send the brief. I review it and send you a mockup or direction within 24 hours. If you like it, you pay the £100 and I build it. If not, no hard feelings.
                             </p>
-                        </blockquote>
+                        </div>
                     </div>
 
                     {/* Right: Structured Brief */}
@@ -492,8 +490,8 @@ export default function LandingPages() {
                             <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.15em", color: "var(--gold)", marginBottom: "24px", paddingBottom: "12px", borderBottom: "1px solid rgba(139,105,20,0.15)" }}>A — About You</div>
                             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
                                 {[
-                                    { id: "name", l: "Name", p: "Joe Bloggs", t: "text" },
-                                    { id: "email", l: "Email", p: "joe@email.com", t: "email" },
+                                    { id: "name", l: "Your name", p: "", t: "text" },
+                                    { id: "email", l: "Email address", p: "", t: "email" },
                                 ].map((f) => (
                                     <div key={f.id}>
                                         <label htmlFor={f.id} style={labelStyle}>{f.l}</label>
@@ -502,8 +500,8 @@ export default function LandingPages() {
                                 ))}
                             </div>
                             <div>
-                                <label htmlFor="handle" style={labelStyle}>Instagram / TikTok Handle</label>
-                                <input id="handle" name="handle" type="text" placeholder="@joefitness" style={inputStyle} />
+                                <label htmlFor="handle" style={labelStyle}>Instagram or TikTok <span style={{ textTransform: "none", opacity: 0.5, letterSpacing: "0" }}>(so I can see your brand)</span></label>
+                                <input id="handle" name="handle" type="text" placeholder="" style={inputStyle} />
                             </div>
                         </div>
 
@@ -511,9 +509,9 @@ export default function LandingPages() {
                         <div style={{ marginBottom: "44px" }}>
                             <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.15em", color: "var(--gold)", marginBottom: "24px", paddingBottom: "12px", borderBottom: "1px solid rgba(139,105,20,0.15)" }}>B — Your Business</div>
                             {[
-                                { id: "services", l: "Services you offer", p: "1-to-1 PT, group classes, online coaching, meal plans..." },
-                                { id: "audience", l: "Who are your ideal clients?", p: "Busy professionals, new mums, athletes, beginners..." },
-                                { id: "location", l: "Location / area you cover", p: "London, online only, North West England..." },
+                                { id: "services", l: "What do you offer?", p: "" },
+                                { id: "audience", l: "Who are you trying to reach?", p: "" },
+                                { id: "location", l: "Where are you based?", p: "" },
                             ].map((f, i) => (
                                 <div key={f.id} style={{ marginBottom: i < 2 ? "14px" : "0" }}>
                                     <label htmlFor={f.id} style={labelStyle}>{f.l}</label>
@@ -527,7 +525,7 @@ export default function LandingPages() {
                             <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.15em", color: "var(--gold)", marginBottom: "24px", paddingBottom: "12px", borderBottom: "1px solid rgba(139,105,20,0.15)" }}>C — Design Preferences</div>
 
                             <div style={{ marginBottom: "24px" }}>
-                                <label style={labelStyle}>Primary colour <span style={{ textTransform: "none", opacity: 0.5, letterSpacing: "0" }}>(pick one or type a hex)</span></label>
+                                <label style={labelStyle}>Pick a colour that fits your brand <span style={{ textTransform: "none", opacity: 0.5, letterSpacing: "0" }}>(or type a hex code)</span></label>
                                 <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" }}>
                                     {[
                                         { c: "#C44B3F", n: "Red" }, { c: "#D4874D", n: "Copper" }, { c: "#C9A96E", n: "Gold" },
@@ -545,13 +543,13 @@ export default function LandingPages() {
                             </div>
 
                             <div style={{ marginBottom: "24px" }}>
-                                <label style={labelStyle}>Design vibe</label>
+                                <label style={labelStyle}>What style suits your brand?</label>
                                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
                                     {[
-                                        { v: "bold", e: "🔥", l: "Bold & Loud", d: "Dark bg, big text, high energy" },
-                                        { v: "clean", e: "✨", l: "Clean & Minimal", d: "White space, simple, modern" },
-                                        { v: "dark", e: "🖤", l: "Dark & Premium", d: "Sleek, luxury, sophisticated" },
-                                        { v: "bright", e: "☀️", l: "Bright & Energetic", d: "Vibrant, colorful, fun" },
+                                        { v: "bold", l: "Bold & In-Your-Face", d: "Dark background, big headlines, strong contrast. Works well if your brand is about intensity — combat sports, HIIT, bootcamps." },
+                                        { v: "clean", l: "Clean & Simple", d: "Lots of white space, easy to read, nothing flashy. Good for a professional, approachable look — online coaching, yoga, wellness." },
+                                        { v: "dark", l: "Dark & High-End", d: "Sleek dark tones, sharp typography, premium feel. Suits high-ticket services, private coaching, or luxury fitness brands." },
+                                        { v: "bright", l: "Bright & Friendly", d: "Colourful, warm, and inviting. Great if your audience is beginners, families, or anyone who might feel intimidated by a gym." },
                                     ].map((vibe) => (
                                         <label key={vibe.v} className="lp-vibe-card" style={{
                                             display: "flex", gap: "12px", alignItems: "flex-start",
@@ -560,7 +558,7 @@ export default function LandingPages() {
                                         }}>
                                             <input type="radio" name="design_vibe" value={vibe.v} style={{ accentColor: "var(--gold)", marginTop: "2px", flexShrink: 0 }} />
                                             <div>
-                                                <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", fontWeight: 600, color: "var(--text-primary)", marginBottom: "3px" }}>{vibe.e} {vibe.l}</div>
+                                                <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", fontWeight: 600, color: "var(--text-primary)", marginBottom: "3px" }}>{vibe.l}</div>
                                                 <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "12px", color: "var(--text-muted)", lineHeight: 1.5 }}>{vibe.d}</div>
                                             </div>
                                         </label>
@@ -569,14 +567,14 @@ export default function LandingPages() {
                             </div>
 
                             <div>
-                                <label htmlFor="inspiration" style={labelStyle}>Inspiration or references <span style={{ textTransform: "none", opacity: 0.5, letterSpacing: "0" }}>(optional)</span></label>
-                                <textarea id="inspiration" name="inspiration" rows={3} placeholder="Links to pages you like, competitors' sites, screenshots..." style={{ ...inputStyle, resize: "vertical" as const }} />
+                                <label htmlFor="inspiration" style={labelStyle}>Any sites or pages you like the look of? <span style={{ textTransform: "none", opacity: 0.5, letterSpacing: "0" }}>(optional)</span></label>
+                                <textarea id="inspiration" name="inspiration" rows={3} placeholder="" style={{ ...inputStyle, resize: "vertical" as const }} />
                             </div>
                         </div>
 
                         {/* D — Must-Haves */}
                         <div style={{ marginBottom: "36px" }}>
-                            <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.15em", color: "var(--gold)", marginBottom: "24px", paddingBottom: "12px", borderBottom: "1px solid rgba(139,105,20,0.15)" }}>D — Must-Haves</div>
+                            <div style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "11px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.15em", color: "var(--gold)", marginBottom: "24px", paddingBottom: "12px", borderBottom: "1px solid rgba(139,105,20,0.15)" }}>D — What Do You Need On The Page?</div>
                             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "20px" }}>
                                 {["WhatsApp button", "Booking / Calendly", "Testimonials section", "Pricing table", "Before & after gallery", "Instagram feed", "Contact form", "Google Maps"].map((feature) => (
                                     <label key={feature} className="lp-check-card" style={{
@@ -590,8 +588,8 @@ export default function LandingPages() {
                                 ))}
                             </div>
                             <div>
-                                <label htmlFor="extras" style={labelStyle}>Anything else? <span style={{ textTransform: "none", opacity: 0.5, letterSpacing: "0" }}>(optional)</span></label>
-                                <textarea id="extras" name="extras" rows={3} placeholder="Existing logo, specific copy, deadlines, anything at all..." style={{ ...inputStyle, resize: "vertical" as const }} />
+                                <label htmlFor="extras" style={labelStyle}>Anything else I should know? <span style={{ textTransform: "none", opacity: 0.5, letterSpacing: "0" }}>(optional)</span></label>
+                                <textarea id="extras" name="extras" rows={3} placeholder="" style={{ ...inputStyle, resize: "vertical" as const }} />
                             </div>
                         </div>
 
@@ -601,10 +599,10 @@ export default function LandingPages() {
                             fontFamily: "var(--font-body), sans-serif", fontSize: "12px", fontWeight: 600,
                             textTransform: "uppercase", letterSpacing: "0.15em",
                             border: "none", borderRadius: "8px", cursor: "pointer",
-                        }}>Send My Brief — £100 →</button>
+                        }}>Send My Brief</button>
 
                         <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "12px", color: "var(--text-muted)", textAlign: "center", marginTop: "16px" }}>
-                            No payment now. I&apos;ll get back to you within 24 hours.
+                            No payment required to get started. I&apos;ll reply within 24 hours.
                         </p>
                     </form>
                 </div>
@@ -623,7 +621,7 @@ export default function LandingPages() {
 }
 
 /* ── Problem Section — Interactive Click-to-Reveal ── */
-function ProblemSection({ sectionLabel }: { sectionLabel: (num: string, text: string) => React.ReactNode }) {
+function ProblemSection() {
     const [openIdx, setOpenIdx] = useState<number | null>(null);
 
     const cards = [
@@ -640,15 +638,13 @@ function ProblemSection({ sectionLabel }: { sectionLabel: (num: string, text: st
         {
             n: "03", title: "Credibility That Closes",
             hook: "Your own .com says you mean business.",
-            body: "trainwithjoe.com hits different to linktr.ee/joe_fitness_PT. A custom domain, fast load times, and a professional layout show clients you invest in your business — so they'll invest in you.",
+            body: "A custom domain hits different to a link-in-bio page. Fast load times and a professional layout show clients you invest in your business — so they'll invest in you.",
         },
     ];
 
     return (
         <section className="lp-section">
             <div className="lp-inner">
-                {sectionLabel("01", "The Problem")}
-
                 <div className="lp-grid-2">
                     <div>
                         <h2 style={{

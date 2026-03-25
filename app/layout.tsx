@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Paymahn — Engineering Commerce",
   description:
     "Headless Shopify, AWS infrastructure, and custom Shopify builders. Swiss-minimal engineering for modern commerce.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
