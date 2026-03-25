@@ -33,42 +33,34 @@ export const caseStudies: readonly CaseStudy[] = [
       {
         type: "video",
         url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/road-ready-before.mp4",
-        label: "Previous Site Recording - Performance & UX Audit",
+        label: "Previous Site — What They Had Before",
       },
     ],
     writeUp: [
       {
-        heading: "Context",
+        heading: "The Problem",
         paragraphs: [
-          "A complete rebuild of the Road Ready HGV platform, moving from a legacy system to a modern, high-performance web architecture.",
-          "The previous site was slow, difficult to navigate, and lacked clear calls-to-action — costing the business leads on every visit.",
+          "Road Ready HGV had a website that was slow, confusing, and didn't do them any favours. People were landing on it and bouncing — no clear pricing, no obvious way to book, and it looked outdated on mobile.",
         ],
       },
       {
-        heading: "What Was Built",
+        heading: "What I Did",
         paragraphs: [
-          "A fast-loading Next.js and Tailwind CSS site with all course information clearly structured and accessible within seconds. Every page features persistent CTAs — enquiry forms, phone links, and WhatsApp buttons — so visitors are never more than one tap from booking.",
-          "Built-in Meta Pixel and Google Analytics integration from day one, preparing the business for paid social media campaigns across TikTok, Instagram, and Facebook. The site is ready to receive ad traffic and convert it immediately.",
+          "Built them a completely new site from scratch using Next.js. Everything a potential customer needs — courses, prices, locations — is right there, no digging required. Every page has a clear call-to-action: book a call, send a WhatsApp, fill in a form.",
+          "I also set up their Meta Pixel and Google Analytics before handover so they're ready to run paid ads on TikTok, Instagram, and Facebook whenever they want. The site loads in under 2 seconds on mobile, which matters a lot when you're paying for ad clicks.",
         ],
       },
       {
-        heading: "Key Benefits",
+        heading: "Result",
         paragraphs: [
-          "Sub-2 second load times on mobile — critical for ad traffic where users bounce fast. Clean, scannable layout that presents pricing, locations, and course details without friction.",
-          "Social media campaign readiness with tracking pixels pre-installed, Open Graph meta tags for link previews, and a mobile-first design that matches how ad traffic actually arrives.",
-        ],
-      },
-      {
-        heading: "Outcome",
-        paragraphs: [
-          "A platform that stands out in the HGV training industry. Faster, clearer, and built to convert — whether traffic comes from Google, social ads, or word of mouth.",
+          "They went from a site that was actively losing them business to one that looks professional, loads fast, and is set up to convert — whether traffic comes from Google or a social media campaign.",
         ],
       },
     ],
   },
   {
     slug: "pressure-performance-transformation",
-    title: "Pressure Performance Transformation",
+    title: "Pressure Performance — Full Business Transformation",
     year: 2025,
     tags: ["Shopify", "Custom Theme", "Wix Migration", "2D Builder"],
     media: [
@@ -80,52 +72,44 @@ export const caseStudies: readonly CaseStudy[] = [
       {
         type: "video",
         url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/pressure-builder.mp4",
-        label: "Old Pressure Performance Home Page",
+        label: "Old Site — What They Had Before",
       },
       {
         type: "video",
         url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/pressure-before-1.mp4",
-        label: "Previous Site Recording (Wix) - Part 1",
+        label: "Old Wix Site Recording — Part 1",
       },
       {
         type: "video",
         url: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/pressure-before-2.mp4",
-        label: "Previous Site Recording (Wix) - Part 2",
+        label: "Old Wix Site Recording — Part 2",
       },
     ],
     writeUp: [
       {
-        heading: "Context",
+        heading: "The Problem",
         paragraphs: [
-          "Just completed a comprehensive business transformation for leading custom martial arts brand Pressure Performance.",
-          "An entire data migration from Wix to Shopify, maintaining all SEO, customer and product information.",
+          "Pressure Performance is a custom martial arts brand — they were stuck on Wix and it was holding them back. Slow site, limited customisation, and they had no way of letting customers design their own gear online.",
         ],
       },
       {
-        heading: "Approach",
+        heading: "What I Did",
         paragraphs: [
-          "A custom theme built on top of Dawn 2.0 with close to 10 custom and fully editable Shopify sections.",
-          "We focused on performance and maintaining the brand's established search presence while moving to a more robust commerce platform.",
+          "Moved them entirely from Wix to Shopify — every product, every customer, every bit of SEO carried over. No rankings lost, no data left behind.",
+          "Built a custom Shopify theme from scratch with around 10 fully editable sections so they can update their own site without needing me. Then built a 2D custom kit builder (more on that below) that lets customers design their own gear in real time.",
         ],
       },
       {
-        heading: "The 2D Builder",
+        heading: "Result",
         paragraphs: [
-          "A fully editable 2D builder for their entire custom range. Customers can choose shirt and short type, choose the base design, add logos, and see text placement come to life in real-time.",
-        ],
-      },
-      {
-        heading: "Outcome",
-        paragraphs: [
-          "A modern, high-converting Shopify store that gives both the customers and the business owners more control and a better user experience.",
-          "Check it out at www.pressureperformance.co.uk",
+          "Night and day difference. Faster site, happier customers, and the owners can actually manage their own store now. Check it out at pressureperformance.co.uk",
         ],
       },
     ],
   },
   {
     slug: "pressure-2d-builder",
-    title: "Pressure Performance — 2D Custom Builder",
+    title: "Pressure Performance — 2D Custom Kit Builder",
     year: 2025,
     tags: ["Custom Tool", "E-Commerce", "Real-Time Preview", "Shopify", "Liquid"],
     media: [
@@ -137,23 +121,23 @@ export const caseStudies: readonly CaseStudy[] = [
     ],
     writeUp: [
       {
-        heading: "Context",
+        heading: "The Problem",
         paragraphs: [
-          "Pressure Performance sells fully custom martial arts gear — shirts, shorts, and fight kits with bespoke designs. The old workflow relied on lengthy back-and-forth messages to confirm layouts, colours, and logo placement, costing the business hours on every single order.",
+          "Pressure sells custom fight gear — shorts, rash guards, the works. Before the builder, every order meant endless DMs back and forth trying to figure out what the customer actually wanted. \"Can you move the logo left a bit?\" \"What about this colour instead?\" It was eating up hours.",
         ],
       },
       {
-        heading: "What Was Built",
+        heading: "What I Built",
         paragraphs: [
-          "A fully interactive 2D configurator built with vanilla JavaScript, HTML5 Canvas, and Shopify Liquid — embedded directly into the storefront. Customers choose a garment type, pick a base design, upload logos, place text, and preview their custom kit in real time before adding to cart.",
-          "Every configuration syncs with Shopify's variant and metafield system, so the order arrives with all customisation details attached — no manual interpretation needed.",
+          "A 2D configurator that sits right on the Shopify product page. Built it with vanilla JS and HTML5 Canvas, wired into Shopify's backend. Customers pick their garment, choose a design, drag their logo on, add text — and see exactly what they're getting before they buy.",
+          "When they add to cart, all the customisation details go straight through to the order. No interpretation needed, no back-and-forth.",
         ],
       },
       {
-        heading: "Business Impact",
+        heading: "The Impact",
         paragraphs: [
-          "The builder has already paid for itself. The client has recouped the development cost through the time saved on the customisation process alone — what used to take multiple messages back and forth now happens instantly on-site.",
-          "Beyond efficiency, the builder has become a marketing tool. The client runs design competitions through social media, encouraging customers to share their custom builds — driving engagement, reach, and repeat traffic back to the store.",
+          "It's already paid for itself. The time saved on the customisation process alone covered the cost of building it.",
+          "But the best bit — the client now runs design competitions on social media. Customers share their custom builds, it drives engagement, and people come back to the site to have a go themselves. A tool that was built to save time ended up becoming a marketing channel.",
         ],
       },
     ],

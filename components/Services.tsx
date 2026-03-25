@@ -1,18 +1,18 @@
 const services = [
   {
-    title: "Headless Shopify",
+    title: "Full Website Builds",
     description:
-      "Modern storefront architecture focused on performance, flexibility, and clean boundaries. Placeholder text extends this block so you can see how cards align when copy runs longer than a single line.",
+      "From scratch or from a mess — I'll build you a site that loads quick, looks sharp, and actually brings in enquiries. Shopify, Next.js, whatever fits. You tell me what you need, I'll figure out the best way to build it.",
   },
   {
-    title: "AWS Infrastructure",
+    title: "Shopify & E-Commerce",
     description:
-      "Reliable foundations: environments, CI/CD, observability, and cost-aware scaling. This sentence exists to validate vertical rhythm and spacing in a three-column grid.",
+      "Custom themes, migrations from Wix or WordPress, product builders, the lot. I've moved entire businesses onto Shopify without losing a single customer record or Google ranking.",
   },
   {
-    title: "Shopify Custom Builders",
+    title: "Landing Pages & Ads",
     description:
-      "Typed tools and modules that make teams faster without making systems fragile. More filler copy here to preview how longer descriptions feel in a restrained, text-forward layout.",
+      "Fast, focused pages built to convert ad traffic. I'll set up your tracking pixels, your domain, your analytics — and have it live before the week's out. Affordable flat-rate pricing, no surprises.",
   },
 ] as const;
 
@@ -28,5 +28,3 @@ export function Services() {
     </div>
   );
 }
-
-

@@ -21,12 +21,10 @@ export default function Home() {
           </div>
           <div className="max-w-2xl space-y-6 text-[16px] leading-relaxed text-black/60">
             <p>
-              Headless Shopify, AWS infrastructure, and custom builders—designed
-              with restraint, shipped with rigor.
+              I&apos;m a software engineer you can hire to build, fix, or completely redo your online presence. Shopify stores, custom websites, landing pages, internal tools — if it lives on the internet, I can build it.
             </p>
             <p>
-              Specialised work for brands that demand performance. From full-scale
-              platform migrations to bespoke interactive experiences.
+              I&apos;ve worked across enough stacks and industries to know what actually matters: does it load fast, does it work on phones, and does it make you money. Everything else is noise.
             </p>
           </div>
         </header>
@@ -88,13 +86,13 @@ export default function Home() {
 
             <div className="space-y-4 text-[14px] leading-relaxed text-black/80 max-w-3xl">
               <p>
-                A full website build for Chris Rees Academy — a well-known martial arts gym in Swansea with a reputation for producing high-level fighters and fostering a welcoming environment for beginners.
+                CRA is a proper martial arts gym in Swansea — known for producing high-level fighters and being a great place for complete beginners. They had zero tech setup. Multiple CRMs that didn&apos;t talk to each other, no website worth mentioning, and no way of capturing leads online.
               </p>
               <p>
-                The gym has no existing tech infrastructure. We&apos;re consolidating multiple disconnected CRMs into a single unified system, integrating it directly with the website so that when a visitor signs up for a free trial, their information is immediately pushed to staff through automated workflows — managing the full lifecycle of a new lead without manual effort.
+                I&apos;m building them a full site from scratch, wiring it into a single CRM so that when someone signs up for a free trial on the website, the staff get notified instantly and the lead is automatically followed up. No more manual chasing, no more missed enquiries.
               </p>
               <p>
-                The site itself is optimised around free trial sign-ups as the primary conversion goal. It features an interactive timetable, dedicated coach profiles, and clear breakdowns of every class offered — all within a clean, connected UI that makes the breadth of what CRA offers immediately scannable.
+                The site has an interactive timetable, coach profiles, and clear info on every class they run. The whole thing is built around one goal: get people through the door for a free trial.
               </p>
             </div>
           </div>
@@ -140,11 +138,10 @@ export default function Home() {
           <div className="mt-16 pt-12 border-t border-[#8B6914]/10">
             <div className="max-w-xl space-y-6">
               <h3 className="text-2xl font-bold tracking-tight text-black">
-                Performance Page Stack.
+                Need a landing page?
               </h3>
               <p className="text-[15px] leading-relaxed text-black/60">
-                Bespoke landing pages built for speed and conversion. Hand-coded,
-                mobile-first, and optimized for sub-2s load times.
+                I build fast, good-looking landing pages for a flat fee. Your own .com domain, mobile-first, analytics set up, live in 48 hours. No templates, no WordPress — just a clean page that does its job.
               </p>
               <div className="pt-2">
                 <Link
@@ -171,12 +168,8 @@ export default function Home() {
           <Services />
         </section>
 
-        <footer className="mt-48 border-t border-[#8B6914]/10 pt-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-[12px] font-medium text-black/40">
-          <div>© {new Date().getFullYear()} Paymahn — Software Engineer</div>
-          <div className="flex gap-8">
-            <a href="mailto:hello@paymahn.com" className="hover:text-[#8B6914] transition-colors">hello@paymahn.com</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#8B6914] transition-colors">LinkedIn</a>
-          </div>
+        <footer className="mt-48 border-t border-[#8B6914]/10 pt-12 text-[12px] font-medium text-black/40">
+          <div>© {new Date().getFullYear()} Paymahn — Engineer for Hire</div>
         </footer>
       </div>
     </main>
