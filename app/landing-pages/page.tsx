@@ -485,7 +485,7 @@ export default function LandingPages() {
                     </div>
 
                     {/* Right: Structured Brief */}
-                    <form action="mailto:hello@paymahn.com" method="POST" encType="text/plain" style={{ display: "flex", flexDirection: "column" }}>
+                    <form action="mailto:pkzadeh@gmail.com" method="POST" encType="text/plain" style={{ display: "flex", flexDirection: "column" }}>
 
                         {/* A — About You */}
                         <div style={{ marginBottom: "44px" }}>
