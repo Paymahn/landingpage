@@ -284,7 +284,20 @@ export default function LandingPages() {
 
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
                         {[
-                            { name: "Tristen Muay Thai", type: "Fighter & Coach", img: "", url: "https://tristenmuaythai.com", result: "Live — tristenmuaythai.com" },
+                            {
+                                name: "Tristen Muay Thai",
+                                type: "Fighter & Coach",
+                                url: "https://tristenmuaythai.com",
+                                result: "Live — tristenmuaythai.com",
+                                videoSrc: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/tristen-muaythai.mp4",
+                            },
+                            {
+                                name: "Road Ready ADR",
+                                type: "HGV / ADR Landing Page",
+                                url: "https://roadreadyhgv.com",
+                                result: "Live — roadreadyhgv.com",
+                                videoSrc: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/road-ready-adr.mp4",
+                            },
                         ].map((work) => (
                             <div key={work.name} className="lp-lift" style={{
                                 backgroundColor: "var(--bg-card)",
@@ -303,7 +316,7 @@ export default function LandingPages() {
 
                                 <div style={{ width: "100%", aspectRatio: "4/3", backgroundColor: "rgba(44,36,24,0.02)", position: "relative", overflow: "hidden" }}>
                                     <video
-                                        src="https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/tristen-muaythai.mp4"
+                                        src={work.videoSrc}
                                         muted
                                         loop
                                         playsInline
