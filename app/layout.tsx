@@ -14,8 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Paymahn — Engineering Commerce",
-  description:
-    "Headless Shopify, AWS infrastructure, and custom Shopify builders. Swiss-minimal engineering for modern commerce.",
+  description: "Custom websites, Shopify stores, AWS infrastructure, and internal tools — built to fit your business, at a price that makes sense.",
   icons: {
     icon: "/icon.svg",
   },
