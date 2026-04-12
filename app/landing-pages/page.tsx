@@ -1,6 +1,3 @@
-"use client";
-import { useState } from "react";
-
 export default function LandingPages() {
     /* ── Shared form styles ── */
     const labelStyle = {
@@ -76,7 +73,7 @@ export default function LandingPages() {
                         fontFamily: "var(--font-body), sans-serif",
                         fontSize: "clamp(14px, 2.5vw, 18px)", color: "var(--gold)", marginTop: "22px",
                         fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase",
-                    }}>For personal trainers who are{" "}
+                    }}>For PTs, boxing coaches, and fitness businesses who are{" "}
                         <span style={{ borderBottom: "2px solid var(--gold)", paddingBottom: "2px" }}>serious</span>
                         {" "}about{" "}
                         <span style={{ borderBottom: "2px solid var(--gold)", paddingBottom: "2px" }}>growth</span>
@@ -119,7 +116,7 @@ export default function LandingPages() {
                 <div className="marquee-track">
                     {[...Array(2)].map((_, idx) => (
                         <div key={idx} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-                            {["48H Delivery", "·", "£100 Flat Rate", "·", "Mobile-First", "·", "Zero Templates", "·", "Your Own .com", "·", "Analytics Included", "·", "Live in 48 Hours", "·"].map((item, i) => (
+                            {["48H Delivery", "·", "£100 Flat Rate", "·", "PTs · Coaches · Gyms · CrossFit · MMA · Yoga", "·", "Zero Templates", "·", "Your Own .com", "·", "Analytics Included", "·"].map((item, i) => (
                                 <span key={`${idx}-${i}`} style={{
                                     fontFamily: item === "·" ? "serif" : "var(--font-body), sans-serif",
                                     fontSize: item === "·" ? "20px" : "11px",
@@ -278,7 +275,7 @@ export default function LandingPages() {
                             </span>
                         </h2>
                         <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "15px", lineHeight: 1.8, color: "var(--text-secondary)", maxWidth: "340px", margin: 0 }}>
-                            A few recent landing pages built for personal trainers and coaches. Fast, custom, and designed to convert.
+                            Landing pages built for PTs, MMA coaches, gyms, and fitness businesses. Fast, custom, and designed to convert.
                         </p>
                     </div>
 
@@ -293,7 +290,7 @@ export default function LandingPages() {
                             },
                             {
                                 name: "Road Ready ADR",
-                                type: "HGV / ADR Landing Page",
+                                type: "HGV / ADR — Website & CRM",
                                 url: "https://roadreadyhgv.com",
                                 result: "Live — roadreadyhgv.com",
                                 videoSrc: "https://pub-0a3ee767ee3f40d798434134d4ef166c.r2.dev/case-studies/road-ready-adr.mp4",
@@ -436,6 +433,62 @@ export default function LandingPages() {
                 </div>
             </section>
 
+            {/* ══════════════════ ADD-ONS ══════════════════ */}
+            <section className="lp-section">
+                <div className="lp-inner">
+                    {sectionLabel("Add-Ons")}
+
+                    <div style={{ marginBottom: "48px", maxWidth: "560px" }}>
+                        <h2 style={{
+                            fontFamily: "var(--font-display), serif",
+                            fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 0.94, fontWeight: 700,
+                            textTransform: "uppercase", marginBottom: "0",
+                        }}>
+                            Need{" "}
+                            <span style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", textTransform: "none", color: "var(--gold)", fontSize: "1.05em", fontWeight: 300 }}>
+                                more?
+                            </span>
+                        </h2>
+                        <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "15px", lineHeight: 1.8, color: "var(--text-secondary)", marginTop: "24px" }}>
+                            The £100 package covers everything most trainers need. But if you want to go further, here are a few extras.
+                        </p>
+                    </div>
+
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "16px" }}>
+                        {[
+                            { title: "Extra Page", price: "+£50", desc: "About page, timetable, blog — whatever you need beyond the single landing page." },
+                            { title: "Logo Design", price: "+£30", desc: "A clean, professional logo if you don't already have one. Delivered with your page." },
+                            { title: "Content Writing", price: "+£25", desc: "I'll write all the copy for you — headlines, bio, service descriptions. Just send me the details." },
+                            { title: "Monthly Maintenance", price: "£10/mo", desc: "Updates, tweaks, and changes whenever you need them. No dev fees, no waiting around." },
+                            { title: "Hosting After Year 1", price: "£5/mo", desc: "Your first year of hosting and domain is included. After that, it's £5 a month to keep it live." },
+                            { title: "Revision Pack", price: "+£20", desc: "Need a full redesign or seasonal refresh down the line? New colours, new layout, same site." },
+                        ].map((addon) => (
+                            <div key={addon.title} className="lp-lift" style={{
+                                padding: "28px 24px",
+                                backgroundColor: "var(--bg-card)",
+                                border: "1px solid var(--border-hairline)",
+                                borderRadius: "10px",
+                                display: "flex", flexDirection: "column", justifyContent: "space-between",
+                            }}>
+                                <div>
+                                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "10px" }}>
+                                        <h3 style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "14px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.04em", color: "var(--text-primary)", margin: 0 }}>
+                                            {addon.title}
+                                        </h3>
+                                        <span style={{ fontFamily: "var(--font-display), serif", fontSize: "18px", fontWeight: 700, color: "var(--gold)", whiteSpace: "nowrap" }}>
+                                            {addon.price}
+                                        </span>
+                                    </div>
+                                    <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", lineHeight: 1.7, color: "var(--text-secondary)", margin: 0 }}>
+                                        {addon.desc}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* ══════════════════ PROCESS ══════════════════ */}
             <section className="lp-section">
                 <div className="lp-inner">
@@ -465,6 +518,9 @@ export default function LandingPages() {
                     </div>
                 </div>
             </section>
+
+            {/* ══════════════════ FAQ ══════════════════ */}
+            <FAQSection />
 
             {/* ══════════════════ APPLICATION FORM ══════════════════ */}
             <section id="apply" className="lp-section" style={{ backgroundColor: "var(--bg-card)", position: "relative", overflow: "hidden" }}>
@@ -633,23 +689,91 @@ export default function LandingPages() {
     );
 }
 
-/* ── Problem Section — Interactive Click-to-Reveal ── */
-function ProblemSection() {
-    const [openIdx, setOpenIdx] = useState<number | null>(null);
+/* ── FAQ Section ── */
+function FAQSection() {
+    const faqs = [
+        {
+            q: "What if I don't like the design?",
+            a: "You don't pay until you've seen a mockup and you're happy with the direction. If it's not right, I'll rework it. If you still don't want it, no charge — genuinely no hard feelings.",
+        },
+        {
+            q: "Do I need to provide photos and content?",
+            a: "A few photos of you training or your gym help a lot, but I can work with what you've got — even just your Instagram. If you want me to write the copy too, that's an extra £25.",
+        },
+        {
+            q: "Can I update the site myself?",
+            a: "The page is hand-coded so it's not a drag-and-drop builder. If you need changes, message me and I'll sort it. Small text tweaks are free — bigger changes fall under the maintenance plan (£10/mo).",
+        },
+        {
+            q: "What happens with the domain after year one?",
+            a: "Your first year of domain registration and hosting is included. After that it's £5/mo to keep everything live. You own the domain — if you want to move it somewhere else, it's yours.",
+        },
+        {
+            q: "How long does it actually take?",
+            a: "48 hours from the moment I have your brief and you've approved the direction. Most pages go live the next day.",
+        },
+        {
+            q: "I already have a website — can you rebuild it?",
+            a: "Yes. Same price. I'll rebuild it from scratch with a proper design, clean code, and your .com domain. Your old site stays live until the new one is ready to swap in.",
+        },
+        {
+            q: "Is it just for personal trainers?",
+            a: "That's the focus, but I've built pages for boxing coaches, CrossFit boxes, yoga instructors, MMA gyms, dance studios, and online coaches. If you're in fitness, it'll work for you.",
+        },
+    ];
 
+    return (
+        <section className="lp-section" style={{ backgroundColor: "var(--bg-card)" }}>
+            <div className="lp-inner">
+                <div style={{ display: "flex", alignItems: "center", gap: "24px", marginBottom: "72px" }}>
+                    <span style={{
+                        fontFamily: "var(--font-body), sans-serif", fontSize: "10px", fontWeight: 600,
+                        textTransform: "uppercase", letterSpacing: "0.25em", color: "var(--gold)", whiteSpace: "nowrap",
+                    }}>FAQ</span>
+                    <div style={{ flex: 1, height: "1px", backgroundColor: "var(--border-hairline)" }} />
+                </div>
+
+                <div style={{ maxWidth: "780px" }}>
+                    <h2 style={{
+                        fontFamily: "var(--font-display), serif",
+                        fontSize: "clamp(2rem, 5vw, 3.5rem)", lineHeight: 0.94, fontWeight: 700,
+                        textTransform: "uppercase", marginBottom: "48px",
+                    }}>
+                        Questions{" "}
+                        <span style={{ fontFamily: "var(--font-display), serif", fontStyle: "italic", textTransform: "none", color: "var(--gold)", fontSize: "1.05em", fontWeight: 300 }}>
+                            answered.
+                        </span>
+                    </h2>
+
+                    <div className="lp-faq-acc">
+                        {faqs.map((faq) => (
+                            <details key={faq.q}>
+                                <summary>{faq.q}</summary>
+                                <p className="faq-answer">{faq.a}</p>
+                            </details>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+/* ── Problem Section ── */
+function ProblemSection() {
     const cards = [
         {
-            n: "01", title: "Professional Presence",
+            title: "Professional Presence",
             hook: "First impressions close deals.",
             body: "Clients judge you in seconds. A polished, branded landing page tells them you're serious — not just another PT with an Instagram page. It's the difference between a scroll-past and a sign-up.",
         },
         {
-            n: "02", title: "Built To Convert",
+            title: "Built To Convert",
             hook: "Every element designed to get enquiries.",
             body: "Clear headline, one strong call-to-action, social proof, and a WhatsApp button — all above the fold. No distractions, no dead links. Just a direct path from visitor to paying client.",
         },
         {
-            n: "03", title: "Credibility That Closes",
+            title: "Credibility That Closes",
             hook: "Your own .com says you mean business.",
             body: "A custom domain hits different to a link-in-bio page. Fast load times and a professional layout show clients you invest in your business — so they'll invest in you.",
         },
@@ -671,64 +795,33 @@ function ProblemSection() {
                             </span>
                         </h2>
                         <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "16px", lineHeight: 1.8, color: "var(--text-secondary)", marginTop: "36px", maxWidth: "400px" }}>
-                            Your followers already trust you. A professional landing page turns that trust into bookings, enquiries, and paying clients.
+                            Whether you&apos;re a 1-2-1 PT, a boxing coach, or running a CrossFit box — your followers already trust you. A professional landing page turns that trust into bookings, enquiries, and paying clients.
                         </p>
                     </div>
 
-                    <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
-                        {cards.map((card, i) => {
-                            const isOpen = openIdx === i;
-                            return (
-                                <div
-                                    key={card.n}
-                                    onClick={() => setOpenIdx(isOpen ? null : i)}
-                                    style={{
-                                        padding: "28px 24px",
-                                        borderBottom: "1px solid var(--border-hairline)",
-                                        borderTop: i === 0 ? "1px solid var(--border-hairline)" : "none",
-                                        borderLeft: isOpen ? "4px solid var(--gold)" : "4px solid transparent",
-                                        backgroundColor: isOpen ? "var(--bg-elevated)" : "transparent",
-                                        cursor: "pointer",
-                                        transition: "all 0.3s ease",
-                                    }}
-                                >
-                                    <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                                        <div style={{ flex: 1 }}>
-                                            <h3 style={{
-                                                fontFamily: "var(--font-body), sans-serif", fontSize: "15px", fontWeight: 700,
-                                                textTransform: "uppercase", letterSpacing: "0.06em",
-                                                color: isOpen ? "var(--gold)" : "var(--text-primary)",
-                                                margin: 0, transition: "color 0.3s ease",
-                                            }}>{card.title}</h3>
-                                            {!isOpen && (
-                                                <p style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", color: "var(--text-muted)", margin: "4px 0 0 0", lineHeight: 1.5 }}>
-                                                    {card.hook}
-                                                </p>
-                                            )}
-                                        </div>
-                                        <span style={{
-                                            fontFamily: "var(--font-body), sans-serif", fontSize: "18px", fontWeight: 300,
-                                            color: "var(--gold)", flexShrink: 0,
-                                            transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
-                                            transition: "transform 0.3s ease",
-                                        }}>+</span>
+                    <div className="lp-problem-acc">
+                        {cards.map((card) => (
+                            <details key={card.title}>
+                                <summary>
+                                    <div style={{ flex: 1 }}>
+                                        <h3 className="problem-title" style={{
+                                            fontFamily: "var(--font-body), sans-serif", fontSize: "15px", fontWeight: 700,
+                                            textTransform: "uppercase", letterSpacing: "0.06em",
+                                            color: "var(--text-primary)", margin: 0, transition: "color 0.3s ease",
+                                        }}>{card.title}</h3>
+                                        <p className="problem-hook" style={{ fontFamily: "var(--font-body), sans-serif", fontSize: "13px", color: "var(--text-muted)", margin: "4px 0 0 0", lineHeight: 1.5 }}>
+                                            {card.hook}
+                                        </p>
                                     </div>
-
-                                    <div style={{
-                                        maxHeight: isOpen ? "200px" : "0",
-                                        overflow: "hidden",
-                                        transition: "max-height 0.4s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.3s ease, margin-top 0.3s ease",
-                                        opacity: isOpen ? 1 : 0,
-                                        marginTop: isOpen ? "16px" : "0",
-                                    }}>
-                                        <p style={{
-                                            fontFamily: "var(--font-body), sans-serif", fontSize: "14px", lineHeight: 1.8,
-                                            color: "var(--text-secondary)", paddingLeft: "40px", margin: 0,
-                                        }}>{card.body}</p>
-                                    </div>
+                                </summary>
+                                <div className="problem-body">
+                                    <p style={{
+                                        fontFamily: "var(--font-body), sans-serif", fontSize: "14px", lineHeight: 1.8,
+                                        color: "var(--text-secondary)", margin: 0,
+                                    }}>{card.body}</p>
                                 </div>
-                            );
-                        })}
+                            </details>
+                        ))}
                     </div>
                 </div>
 

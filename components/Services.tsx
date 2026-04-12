@@ -10,9 +10,9 @@ const services = [
       "Custom themes, migrations from Wix or WordPress, product builders, the lot. I've moved entire businesses onto Shopify without losing a single customer record or Google ranking.",
   },
   {
-    title: "Landing Pages & Ads",
+    title: "AWS Architecture & Custom Tools",
     description:
-      "Fast, focused pages built to convert ad traffic. I'll set up your tracking pixels, your domain, your analytics — and have it live before the week's out. Affordable flat-rate pricing, no surprises.",
+      "Serverless backends, internal CRMs, lead pipelines — built on AWS with Amplify, AppSync, Cognito, and whatever else the project needs. I'll design the architecture, build the tooling, and wire it into your frontend so everything talks to everything.",
   },
 ] as const;
 

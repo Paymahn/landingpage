@@ -21,9 +21,9 @@ export type CaseStudy = {
 export const caseStudies: readonly CaseStudy[] = [
   {
     slug: "road-ready-hgv-transformation",
-    title: "Road Ready HGV Transformation",
+    title: "Road Ready HGV — Website, CRM & Lead Pipeline",
     year: 2025,
-    tags: ["Next.js", "Tailwind CSS", "High Performance", "Social Media Ready"],
+    tags: ["Next.js", "AWS Amplify", "CRM", "Lead Pipeline", "Meta Ads"],
     media: [
       {
         type: "video",
@@ -40,20 +40,32 @@ export const caseStudies: readonly CaseStudy[] = [
       {
         heading: "The Problem",
         paragraphs: [
-          "Road Ready HGV had a website that was slow, confusing, and didn't do them any favours. People were landing on it and bouncing — no clear pricing, no obvious way to book, and it looked outdated on mobile.",
+          "Road Ready HGV had a website that was slow, confusing, and didn't do them any favours. People were landing on it and bouncing — no clear pricing, no obvious way to book, and it looked outdated on mobile. On the operations side, enquiries were going into inboxes and getting lost — no central system, no follow-up process.",
         ],
       },
       {
-        heading: "What I Did",
+        heading: "The Website",
         paragraphs: [
-          "Built them a completely new site from scratch using Next.js. Everything a potential customer needs — courses, prices, locations — is right there, no digging required. Every page has a clear call-to-action: book a call, send a WhatsApp, fill in a form.",
-          "I also set up their Meta Pixel and Google Analytics before handover so they're ready to run paid ads on TikTok, Instagram, and Facebook whenever they want. The site loads in under 2 seconds on mobile, which matters a lot when you're paying for ad clicks.",
+          "Built them a completely new marketing site from scratch using Next.js, deployed on Vercel. Everything a potential customer needs — courses, prices, locations — is right there, no digging required. Every page has a clear call-to-action: book a call, send a WhatsApp, fill in a form. Loads in under 2 seconds on mobile.",
+        ],
+      },
+      {
+        heading: "CRM & Enquiry Pipeline",
+        paragraphs: [
+          "Alongside the website, I built a separate internal CRM — also Next.js — backed by AWS Amplify. Staff log in via Cognito, and every lead is stored as a Driver record in a GraphQL data layer. No third-party form service: the website's enquiry form posts to its own API route, which runs anti-spam checks (honeypot, rate limiting, duplicate detection) and then forwards clean data straight into the CRM over a secure connection. Staff get notified by email the moment a new lead lands.",
+          "Email delivery was initially set up via standard SMTP, but cloud hosting environments routinely block outbound SMTP — so I migrated everything to the Gmail API with OAuth2 credentials. Reliable, no third-party mail service needed.",
+        ],
+      },
+      {
+        heading: "Ad Tracking & Attribution",
+        paragraphs: [
+          "Set up Meta Pixel and Google Analytics before handover. Crucially, conversion events (Lead) only fire after a lead is actually saved in the CRM — so bots, honeypot catches, and duplicate submissions don't pollute their ad data. I also wired up Meta's Conversions API from the server side for more accurate reporting, and built first-touch UTM and click-ID capture so Road Ready can see exactly which ad brought each enquiry in.",
         ],
       },
       {
         heading: "Result",
         paragraphs: [
-          "They went from a site that was actively losing them business to one that looks professional, loads fast, and is set up to convert — whether traffic comes from Google or a social media campaign.",
+          "They went from a site that was actively losing them business and no lead tracking to speak of — to a professional online presence with a proper CRM, automated notifications, and ad-ready attribution. Two Vercel projects, one Amplify backend, everything coordinated.",
         ],
       },
     ],
