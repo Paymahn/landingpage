@@ -1,4 +1,5 @@
 import { caseStudies } from "@/content/case-studies";
+import Image from "next/image";
 
 export function CaseStudies() {
   return (
@@ -51,7 +52,7 @@ export function CaseStudies() {
                           />
                         </div>
                       ) : (
-                        <img src={item.url} alt={item.label || cs.title} className="w-full rounded-sm" />
+                        <Image src={item.url} alt={item.label || cs.title} className="w-full rounded-sm" width={800} height={450} />
                       )}
                       {item.label && (
                         <p className="text-[12px] italic text-black/50">{item.label}</p>

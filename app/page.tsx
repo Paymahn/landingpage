@@ -15,10 +15,10 @@ export default function Home() {
           </div>
           <div className="max-w-2xl space-y-6 text-[16px] leading-relaxed text-black/60">
             <p>
-              I'm a software engineer you can hire to build, fix, or completely redo your online presence. Shopify stores, custom websites, landing pages, internal tools — if it lives on the internet, I can build it.
+              I&apos;m a software engineer you can hire to build, fix, or completely redo your online presence. Shopify stores, custom websites, landing pages, internal tools — if it lives on the internet, I can build it.
             </p>
             <p>
-              I always aim to provide nothing less than 100% to my clients, you've invested in me, I'll invest in you.
+              I always aim to provide nothing less than 100% to my clients, you&apos;ve invested in me, I&apos;ll invest in you.
             </p>
           </div>
         </header>
@@ -80,10 +80,10 @@ export default function Home() {
 
             <div className="space-y-4 text-[14px] leading-relaxed text-black/80 max-w-3xl">
               <p>
-                CRA is the most storied martial arts gym in Swansea — known for producing high-level fighters and being a great place for complete beginners. They had zero tech setup. Multiple CRMs that didn't talk to each other,  no website worth mentioning, and no way of capturing leads online.
+                CRA is the most storied martial arts gym in Swansea — known for producing high-level fighters and being a great place for complete beginners. They had zero tech setup. Multiple CRMs that didn&apos;t talk to each other,  no website worth mentioning, and no way of capturing leads online.
               </p>
               <p>
-                I'm building them a full site from scratch, wiring it into a single CRM so that when someone signs up for a free trial on the website, the staff get notified instantly and the lead is automatically followed up.
+                I&apos;m building them a full site from scratch, wiring it into a single CRM so that when someone signs up for a free trial on the website, the staff get notified instantly and the lead is automatically followed up.
               </p>
               <p>
                 The site gives CRA a strong online presence — interactive timetable, coach profiles, class breakdowns, and a feel for what the gym is actually like. 
