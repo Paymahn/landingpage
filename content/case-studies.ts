@@ -22,7 +22,7 @@ export const caseStudies: readonly CaseStudy[] = [
   {
     slug: "road-ready-hgv-transformation",
     title: "Road Ready HGV — Website, CRM & Lead Pipeline",
-    year: 2025,
+    year: 2026,
     tags: ["Next.js", "AWS Amplify", "CRM", "Lead Pipeline", "Meta Ads"],
     media: [
       {
@@ -73,7 +73,7 @@ export const caseStudies: readonly CaseStudy[] = [
   {
     slug: "pressure-performance-transformation",
     title: "Pressure Performance — Full Business Transformation",
-    year: 2025,
+    year: 2026,
     tags: ["Shopify", "Custom Theme", "Wix Migration", "2D Builder"],
     media: [
       {
@@ -122,7 +122,7 @@ export const caseStudies: readonly CaseStudy[] = [
   {
     slug: "pressure-2d-builder",
     title: "Pressure Performance — 2D Custom Kit Builder",
-    year: 2025,
+    year: 2026,
     tags: ["Custom Tool", "E-Commerce", "Real-Time Preview", "Shopify", "Liquid"],
     media: [
       {
